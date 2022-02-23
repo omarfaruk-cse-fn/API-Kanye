@@ -27,10 +27,11 @@ const loadCountryByName = (name) => {
         .then(data => displayCountryDetail(data[0]))
 }
 const displayCountryDetail = (country) => {
+    console.log(country)
     const countryDiv = document.getElementById('country-detail')
     countryDiv.innerHTML = `
     <h5>Country Name: ${country.name.common}</h5>
     <p>Population: ${country.population}</p>
-    <img src="${country.name.flag}">
+    <img src="${country.flags.png}">
     `
 }
